@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en" class="vk">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>
+      Infomeet | IT Service Provider
+    </title>
+<link rel="icon" href="/favicon.png"><link href="style.css" rel="stylesheet"></head>
+<body x-data="
+      {
+        scrolledFromTop: false
+      }
+    " x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false" @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false" class="kf fl">
+
+<header x-data="
+        {
+          navbarOpen: false,
+          dropdownOpen: false
+        }
+      " :class="scrolledFromTop ? 'kf gl zf rl ij oj ' : ' lf hl' " class="f ba qb jc be c">
+<div class="a">
+<div class="e ha qb be ee">
+  <div>
+    <img id="navlogo" src="/src/images/logo/infologo-logo.png" alt="">
+  </div>
+<div class="qb jc be ce ng">
+<div>
+<button @click="navbarOpen = !navbarOpen" :class="navbarOpen && 'navbarTogglerActive' " id="navbarToggler" class="d g h/2 ob qd/2 me pg qg mj qk to">
+<span :class="navbarOpen && 'sd i' " class="e ia ob tb lc mf il"></span>
+<span :class="navbarOpen && 'fj' " class="e ia ob tb lc mf il"></span>
+<span :class="navbarOpen && 'j td' " class="e ia ob tb lc mf il"></span>
+</button>
+<nav :class="!navbarOpen && 'sb' " id="navbarCollapse" class="d g k jc _c me kf rg sg jj fl fo qo uo cp dp hp xp bq">
+<ul class="vq ro">
+<li class="xi ul">
+<a href="#home" class="scroll-menu qb tg gi oi bj kk vl em ko so ip cq 2xl:ud-ml-12">
+Home
+</a>
+</li>
+<li>
+<a href="#features" class="scroll-menu qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12">
+Features
+</a>
+</li>
+<li>
+<a href="#roadmap" class="scroll-menu qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12">
+Roadmap
+</a>
+</li>
+<li class="sk submenu-item e">
+<a href="javascript:void(0)" @click="dropdownOpen = !dropdownOpen" class="e qb tg gi oi xi uj vj wj/2 xj yj zj _j ak bk ck dk tk ul hm ko so ip np op zp cq 2xl:ud-ml-12">
+Career
+</a>
+<div :class="dropdownOpen ? 'ob' : 'sb qo ' " class="submenu e k l me kf pj sj uk fl eo go ho vo ep wp yp _p aq">
+<a href="/Internship.html" class="ob ne ug hi yi kk vl fm jp">
+Internship
+</a>
+<a href="blog-details.html" class="ob ne ug hi yi kk vl fm jp">
+Job's
+</a>
+
+
+
+
+</div>
+</li>
+<li>
+<a href="/support.html" class=" qb tg gi oi xi kk ul em ko so ip cq 2xl:ud-ml-12">
+    Support
+  </a>
+
+</li>
+</ul>
+</nav>
+</div>
+<div class="qb ce lh pp oq 2xl:ud-pl-20">
+<div class="oa">
+<label for="darkToggler" class="qb ub mc vd be de oe nf jl">
+<input type="checkbox" name="darkToggler" id="darkToggler" class="b" aria-label="darkToggler" />
+<span class="qb vb nc be de oe of zi hl ul">
+<svg width="16" height="16" viewBox="0 0 16 16" class="cg">
+<path d="M4.50663 3.2267L3.30663 2.03337L2.36663 2.97337L3.55996 4.1667L4.50663 3.2267ZM2.66663 7.00003H0.666626V8.33337H2.66663V7.00003ZM8.66663 0.366699H7.33329V2.33337H8.66663V0.366699ZM13.6333 2.97337L12.6933 2.03337L11.5 3.2267L12.44 4.1667L13.6333 2.97337ZM11.4933 12.1067L12.6866 13.3067L13.6266 12.3667L12.4266 11.1734L11.4933 12.1067ZM13.3333 7.00003V8.33337H15.3333V7.00003H13.3333ZM7.99996 3.6667C5.79329 3.6667 3.99996 5.46003 3.99996 7.6667C3.99996 9.87337 5.79329 11.6667 7.99996 11.6667C10.2066 11.6667 12 9.87337 12 7.6667C12 5.46003 10.2066 3.6667 7.99996 3.6667ZM7.33329 14.9667H8.66663V13H7.33329V14.9667ZM2.36663 12.36L3.30663 13.3L4.49996 12.1L3.55996 11.16L2.36663 12.36Z" />
+</svg>
+</span>
+<span class="qb vb nc be de oe lf xi kl vl">
+<svg width="13" height="15" viewBox="0 0 13 15" class="cg">
+<path d="M10.6111 12.855C11.591 12.1394 12.3151 11.1979 12.7723 10.1623C10.4824 10.4065 8.1342 9.46314 6.67948 7.47109C5.22476 5.47905 5.04093 2.95516 5.97054 0.848179C4.84491 0.968503 3.72768 1.37162 2.74781 2.08719C-0.224105 4.25747 -0.874706 8.43084 1.29558 11.4028C3.46586 14.3747 7.63923 15.0253 10.6111 12.855Z" />
+</svg>
+</span>
+</label>
+</div>
+<div class="sb pm">
+<a href="https://wa.me/7409069096" class="qb be de oe re ze vg wg ii oi xi qj ek fk lk zk vl am fm lg:px-4 xl:px-8">
+  Whatsapp
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+
+
+<section id="home" class="e ca wh xh">
+<div class="a">
+<div class="ha qb _d">
+<div class="jc ng">
+<div class="la fd fi">
+<h1 class="pa li pi ui yi vl bo">
+  Infomeet
+</h1>
+<p class="la pa gd gi qi xi vl">
+  To deliver on the promise of technology and human ingenuity
+</p>
+<p class="gi qi xi ul">
+  We help our clients become the next and best versions of themselves.
+  </p>
+  <div class="ma ra qb _d be de jm">
+    <div class="sk e db eh xm">
+    <span class="eb qb ac pc be de oe kf">
+    <img src="/src/images/download/mongodb.svg">
+    </span>
+    <div class="d s t/2 ba rd/2 le oe rf _g tg zi fj uk">
+    <span class="d u t/2 bc qc rd/2 sd rf"></span>
+    <span>Mongo DB</span>
+    </div>
+    </div>
+    <div class="sk e db eh xm">
+    <span class="eb qb ac pc be de oe kf">
+    <img src="/src/images/download/express js.svg">
+    </span>
+    <div class="d s t/2 ba rd/2 le oe rf _g tg zi fj uk">
+    <span class="d u t/2 bc qc rd/2 sd rf"></span>
+    <span>Express JS</span>
+    </div>
+    </div>
+    <div class="sk e db eh xm">
+    <span class="eb qb ac pc be de oe kf">
+    <img src="src/images/download/react.svg">
+    </span>
+    <div class="d s t/2 ba rd/2 le oe rf _g tg zi fj uk">
+    <span class="d u t/2 bc qc rd/2 sd rf"></span>
+    <span>React</span>
+    </div>
+    </div>
+    <div class="sk e db eh xm">
+    <span class="eb qb ac pc be de oe kf">
+    <img src="src/images/download/node js.svg">
+    </span>
+    <div class="d s t/2 ba rd/2 le oe rf _g tg zi fj uk">
+    <span class="d u t/2 bc qc rd/2 sd rf"></span>
+    <span>Node JS</span>
+    </div>
+    </div>
+    <div class="sk e db eh xm">
+    <span class="eb qb ac pc be de oe kf">
+    <img src="src/images/download/android.svg" alt="">
+    </span>
+    <div class="d s t/2 ba rd/2 le oe rf _g tg zi fj uk">
+    <span class="d u t/2 bc qc rd/2 sd rf"></span>
+    <span>Andriod</span>
+    </div>
+    </div>
+    <div class="sk e db eh xm">
+    <span class="eb qb ac pc be de oe kf">
+    <img src="src/images/download/ios.svg" alt="">
+    </span>
+    <div class="d s t/2 ba rd/2 le oe rf _g tg zi fj uk">
+    <span class="d u t/2 bc qc rd/2 sd rf"></span>
+    <span>IOS</span>
+    </div>
+    </div>
+    </div>
+    <a href="#services" class="oe of zg wg ii oi zi hk dark:hover:bg-opacity-90">DISCOVER
+    </a>
+</div>
+</div>
+</div>
+</div>
+<div class="d f l ea yb jc gj" style="
+          background-image: linear-gradient(
+            180deg,
+            #3e7dff 0%,
+            rgba(62, 125, 255, 0) 100%
+          );
+        "></div>
+<img src="src/images/shapes/hero-shape-1.svg" alt="" class="d l f ea" />
+<img src="src/images/shapes/hero-shape-2.svg" alt="" class="d m f ea" />
+</section>
+
+
+<section>
+<div class="a">
+<div class="wow fadeInUp ue bf yh al" data-wow-delay="0s">
+<h2 class="ra fi gi pi yi vl en">
+Join the 200+ companies using the our Services
+</h2>
+<div class="ha qb _d be de">
+<div class="ng">
+<a href="#"  rel="nofollow noopenner" class="ra qb hd de hj nj nk ok gm">
+<img src="src/images/brands/C1.png" alt="niki" class="la sb ac fi wk" />
+<img src="src/images/brands/C1.png" alt="niki" class="la ac fi xk" />
+</a>
+</div>
+<div class="ng">
+<a href="https://www.itilite.com/" target="_blank" rel="nofollow noopenner" class="ra qb hd de hj nj nk ok gm">
+<img src="src/images/brands/C2.png" alt="itilite" class="la sb ac fi wk" />
+<img src="src/images/brands/C2.png" alt="itilite" class="la ac fi xk" />
+</a>
+</div>
+<div class="ng">
+<a href="https://www.buywow.in/" target="_blank" rel="nofollow noopenner" class="ra qb hd de hj nj nk ok gm">
+<img src="src/images/brands/C4-white.png" alt="wow" class="la sb ac fi wk" />
+<img src="src/images/brands/C4.webp" alt="wow" class="la ac fi xk" />
+</a>
+</div>
+<div class="ng">
+<a href="https://doxper.com/" target="_blank" rel="nofollow noopenner" class="ra qb hd de hj nj nk ok gm">
+<img src="src/images/brands/C5.png" alt="doxper" class="la sb ac fi wk" />
+<img src="src/images/brands/C5.png" alt="doxper" class="la ac fi xk" />
+</a>
+</div>
+<div class="ng">
+<a href="https://www.fyllo.in/" target="_blank" rel="nofollow noopenner" class="ra qb hd de hj nj nk ok gm">
+<img src="src/images/brands/C6.webp" alt="fyllo" class="la sb ac fi wk" />
+<img src="src/images/brands/C6.webp" alt="fyllo" class="la ac fi xk" />
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="features" class="th zh">
+<div class="a">
+<div class="wow fadeInUp la fb id fi qn" data-wow-delay="0s">
+<span class="va gi pi ri bj fn">
+  About What We Do
+</span>
+<h2 class="va li pi ui yi vl bo">
+  Explore our services
+</h2>
+<p class="gi qi xi ul">
+  Infomeet helps companies modernize technology,
+   reimagine processes and transform experiences so they stay ahead in a fast-changing world.
+</p>
+</div>
+<div class="ha qb _d">
+<div class="jc ng vn/2 yo/3">
+<div class="wow fadeInUp la bb jd fi" data-wow-delay="0s">
+<div class="la gb qb cc mc be de oe of zi">
+<img src="/src/images/services/1.png" alt="image">
+</div>
+<div>
+<h3 class="va ji pi yi vl gn rp rq">
+  Application services
+</h3>
+<p class="ii qi xi ul dn qp pq">
+  Crafting bespoke applications tailored to your unique requirements. From concept to deployment,
+   we breathe life into your ideas, enhancing user experiences and driving operational efficiency.
+</p>
+</div>
+</div>
+</div>
+<div class="jc ng vn/2 yo/3">
+<div class="wow fadeInUp la bb jd fi" data-wow-delay="0s">
+<div class="la gb qb cc mc be de oe of zi">
+  <img src="/src/images/services/2.png" alt="image">
+</div>
+<div>
+<h3 class="va ji pi yi vl gn rp rq">
+  Data and Analytics
+</h3>
+<p class="ii qi xi ul dn qp pq">
+  Uncover insights hidden within your data goldmine. 
+  Our advanced analytics solutions transform raw data into actionable
+   intelligence, enabling you to make informed decisions and achieve optimal outcomes.
+</p>
+</div>
+</div>
+</div>
+<div class="jc ng vn/2 yo/3">
+<div class="wow fadeInUp la bb jd fi" data-wow-delay="0s">
+<div class="la gb qb cc mc be de oe of zi">
+  <img src="/src/images/services/3.png" alt="image">
+</div>
+<div>
+<h3 class="va ji pi yi vl gn rp rq">
+  Artificial Intelligence
+</h3>
+<p class="ii qi xi ul dn qp pq">
+  Leverage the power of AI for transformative solutions. From chatbots to predictive analytics,
+   we infuse AI into your operations, enabling you to stay ahead in an ever-evolving digital landscape.
+</p>
+</div>
+</div>
+</div>
+<div class="jc ng vn/2 yo/3">
+<div class="wow fadeInUp la bb jd fi" data-wow-delay="0s">
+<div class="la gb qb cc mc be de oe of zi">
+  <img src="/src/images/services/4.png" alt="image">
+</div>
+<div>
+<h3 class="va ji pi yi vl gn rp rq">
+  Security
+</h3>
+<p class="ii qi xi ul dn qp pq">
+  Infomeet’s end-to-end security solutions combine deep domain and industry expertise.
+  Our future-focused approach gives you the confidence of a secure environment, 
+  so you can move faster, be bolder and succeed into the future.
+
+
+</p>
+</div>
+</div>
+</div>
+<div class="jc ng vn/2 yo/3">
+<div class="wow fadeInUp la bb jd fi" data-wow-delay="0s">
+<div class="la gb qb cc mc be de oe of zi">
+  <img src="/src/images/services/5.png" alt="image">
+</div>
+<div>
+<h3 class="va ji pi yi vl gn rp rq">
+Marketing & SEO
+</h3>
+<p class="ii qi xi ul dn qp pq">
+  Elevate your online presence with our data-driven marketing strategies. We optimize your digital footprint,
+   boost brand visibility, and drive conversion through SEO, SEM, and targeted campaigns.
+</p>
+</div>
+</div>
+</div>
+<div class="jc ng vn/2 yo/3">
+<div class="wow fadeInUp la bb jd fi" data-wow-delay="0s">
+<div class="la gb qb cc mc be de oe of zi">
+  <img src="/src/images/services/6.png" alt="image">
+</div>
+<div>
+<h3 class="va ji pi yi vl gn rp rq">
+  Automation
+</h3>
+<p class="ii qi xi ul dn qp pq">
+  Streamline operations and enhance efficiency through intelligent automation.
+  Our experts develop solutions that minimize manual efforts,
+  maximize accuracy, and enable your workforce to focus on high-value tasks.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- Roadmap start -->
+
+<section id="roadmap" class="e ca gh">
+<div class="a">
+<div class="wow fadeInUp la fb id fi qn" data-wow-delay="0s">
+<span class="va gi pi ri bj fn">
+ROADMAP
+</span>
+<h2 class="va li pi ui yi vl bo">
+  Software Development Life Cycle (SDLC)
+</h2>
+<p class="gi qi xi ul">
+  At Infomeet, we follow a well-defined Software Development Life Cycle (SDLC) process to ensure the 
+  successful delivery of high-quality software solutions.
+  Our SDLC methodology encompasses the following phases:
+</p>
+</div>
+
+<div class="ha qb de">
+<div class="jc ng zo/12 iq/12">
+<div class="wow fadeInUp e ha qb _d yn mp" data-wow-delay="0s">
+<span class="d f w sb yb sc nf nl ln/2 un"></span>
+<div class="jc ng vn/2">
+<div class="e ca ra me nf hh sg gl rn sn ao oo">
+<span class="d h/2 l sb ec tc qd/2 oe te df kf bl mn nn un io"></span>
+<span class="d x h/2 sb bc qc qd/2 sd nf gl un"></span>
+<h3 class="va ji pi yi vl">
+Step 1st :
+</h3>
+<p class="za ii qi xi ul">
+  In this initial phase, we collaborate closely with our clients to understand their specific needs, objectives, and goals for the software project.
+  Through in-depth discussions, we outline the project's scope, features, and functionality.
+</p>
+<a href="#" class="rb be de oe kf ig _h">
+<span class="uh">
+<img src="/src/images/roadmap/RequirementAna - Copy.png" width="20">
+</span>
+<span class="rh ki oi xi ul">
+  Requirement Analysis
+</span>
+
+<span>
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66675 5.00008L2.25425 5.58758L4.58341 3.26258V8.33341H5.41675V3.26258L7.74175 5.59175L8.33341 5.00008L5.00008 1.66675L1.66675 5.00008Z" fill="#60D16B" />
+</svg>
+</span>
+</a>
+</div>
+</div>
+<div class="jc ng vn/2"></div>
+<div class="jc ng vn/2"></div>
+<div class="jc ng vn/2">
+<div class="e ca ra me nf hh sg gl tn sn po">
+<span class="d h/2 l sb ec tc qd/2 oe te df kf bl on pn un jo"></span>
+<span class="d y h/2 sb bc qc qd/2 sd nf gl un"></span>
+<h3 class="va ji pi yi vl">
+Step 2nd :
+</h3>
+<p class="za ii qi xi ul">
+  Once the requirements are clear, our experienced project managers create a comprehensive project plan. 
+  This plan outlines the project's timeline, resource allocation, potential risks, and mitigation strategies.
+   We aim to establish a solid foundation for the project's execution.
+</p>
+<a href="#" class="rb be de oe kf ig _h">
+<span class="uh">
+  <img src="/src/images/roadmap/sust8 - Copy.png" width="20">
+</span>
+<span class="rh ki oi xi ul">
+  Planning
+</span>
+
+<span>
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66675 5.00008L2.25425 5.58758L4.58341 3.26258V8.33341H5.41675V3.26258L7.74175 5.59175L8.33341 5.00008L5.00008 1.66675L1.66675 5.00008Z" fill="#60D16B" />
+</svg>
+</span>
+</a>
+</div>
+</div>
+<div class="jc ng vn/2">
+<div class="e ca ra me nf hh sg gl rn sn ao oo">
+<span class="d h/2 l sb ec tc qd/2 oe te df kf bl mn nn un io"></span>
+<span class="d x h/2 sb bc qc qd/2 sd nf gl un"></span>
+<h3 class="va ji pi yi vl">
+  Step 3rd :
+</h3>
+<p class="za ii qi xi ul">
+  Our skilled design team works on creating a detailed design 
+  blueprint for the software. This includes designing the user interface, architecture, database structure, 
+  and any technical specifications necessary for development.
+</p>
+<a href="#" class="rb be de oe kf ig _h">
+<span class="uh">
+  <img src="/src/images/roadmap/Designing - Copy.png" width="20">
+</span>
+<span class="rh ki oi xi ul">
+  Design
+</span>
+
+<span>
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66675 5.00008L2.25425 5.58758L4.58341 3.26258V8.33341H5.41675V3.26258L7.74175 5.59175L8.33341 5.00008L5.00008 1.66675L1.66675 5.00008Z" fill="#60D16B" />
+</svg>
+</span>
+</a>
+</div>
+</div>
+<div class="jc ng vn/2"></div>
+<div class="jc ng vn/2"></div>
+<div class="jc ng vn/2">
+<div class="e ca ra me nf hh sg gl tn sn po">
+<span class="d h/2 l sb ec tc qd/2 oe te df kf bl on pn un jo"></span>
+<span class="d y h/2 sb bc qc qd/2 sd nf gl un"></span>
+<h3 class="va ji pi yi vl">
+  Step 4th :
+</h3>
+<p class="za ii qi xi ul">
+  In this phase, our talented developers bring the design to life.
+   They write code, develop software modules, and integrate various components to build a fully functional software product.
+   We follow best practices and coding standards to ensure the software's reliability and maintainability.
+</p>
+<a href="#" class="rb be de oe kf ig _h">
+<span class="uh">
+  <img src="/src/images/roadmap/testing - Copy.png" width="20">
+</span>
+<span class="rh ki oi xi ul">
+  Testing
+</span>
+
+<span>
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66675 5.00008L2.25425 5.58758L4.58341 3.26258V8.33341H5.41675V3.26258L7.74175 5.59175L8.33341 5.00008L5.00008 1.66675L1.66675 5.00008Z" fill="#60D16B" />
+</svg>
+</span>
+</a>
+</div>
+</div>
+<div class="jc ng vn/2">
+  <div class="e ca ra me nf hh sg gl rn sn ao oo">
+  <span class="d h/2 l sb ec tc qd/2 oe te df kf bl mn nn un io"></span>
+  <span class="d x h/2 sb bc qc qd/2 sd nf gl un"></span>
+  <h3 class="va ji pi yi vl">
+    Step 5th :
+  </h3>
+  <p class="za ii qi xi ul">
+    Thorough testing is a crucial step in our SDLC process. 
+    Our quality assurance team conducts various types of testing, 
+    including unit testing, integration testing, and system testing.
+     We identify and rectify any defects to ensure the software meets the highest quality standards.
+  </p>
+  <a href="#" class="rb be de oe kf ig _h">
+  <span class="uh">
+    <img src="/src/images/roadmap/development - Copy.png" width="20">
+  </span>
+  <span class="rh ki oi xi ul">
+    Development
+  </span>
+
+  <span>
+  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1.66675 5.00008L2.25425 5.58758L4.58341 3.26258V8.33341H5.41675V3.26258L7.74175 5.59175L8.33341 5.00008L5.00008 1.66675L1.66675 5.00008Z" fill="#60D16B" />
+  </svg>
+  </span>
+  </a>
+  </div>
+  </div>
+  <div class="jc ng vn/2"></div>
+<div class="jc ng vn/2"></div>
+<div class="jc ng vn/2">
+<div class="e ca ra me nf hh sg gl tn sn po">
+<span class="d h/2 l sb ec tc qd/2 oe te df kf bl on pn un jo"></span>
+<span class="d y h/2 sb bc qc qd/2 sd nf gl un"></span>
+<h3 class="va ji pi yi vl">
+  Step 6th :
+</h3>
+<p class="za ii qi xi ul">
+  Once the software passes all testing phases, we deploy it to the target environment. 
+  Our deployment process is carefully planned to minimize disruptions 
+  and ensure a smooth transition from development to production.
+</p>
+<a href="#" class="rb be de oe kf ig _h">
+  <img src="/src/images/roadmap/deployment - Copy.png" width="20">
+</span>
+<span class="rh ki oi xi ul">
+  Deployment
+</span>
+
+<span>
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66675 5.00008L2.25425 5.58758L4.58341 3.26258V8.33341H5.41675V3.26258L7.74175 5.59175L8.33341 5.00008L5.00008 1.66675L1.66675 5.00008Z" fill="#60D16B" />
+</svg>
+</span>
+</a>
+</div>
+</div>
+<div class="jc ng vn/2">
+  <div class="e ca ra me nf hh sg gl rn sn ao oo">
+  <span class="d h/2 l sb ec tc qd/2 oe te df kf bl mn nn un io"></span>
+  <span class="d x h/2 sb bc qc qd/2 sd nf gl un"></span>
+  <h3 class="va ji pi yi vl">
+   Step 7th :
+  </h3>
+  <p class="za ii qi xi ul">
+    Our commitment doesn't end with deployment. 
+    We offer ongoing maintenance and support services to address any 
+    issues that may arise post-deployment. This includes regular updates, 
+    bug fixes, and enhancements to keep the software current and optimized.
+
+  </p>
+  <a href="#" class="rb be de oe kf ig _h">
+  <span class="uh">
+    <img src="/src/images/roadmap/maint - Copy.png" width="20">
+  </span>
+  <span class="rh ki oi xi ul">
+    Maintenance and Support
+  </span>
+
+  <span>
+  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M1.66675 5.00008L2.25425 5.58758L4.58341 3.26258V8.33341H5.41675V3.26258L7.74175 5.59175L8.33341 5.00008L5.00008 1.66675L1.66675 5.00008Z" fill="#60D16B" />
+  </svg>
+  </span>
+  </a>
+  </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<div class="d l n ea">
+<img src="src/images/shapes/timeline.svg" alt="shape" />
+</div>
+</section>
+
+
+
+
+
+<section id="testimonial" class="nf th oh ml">
+<div class="a">
+<div class="wow fadeInUp la fb id fi qn" data-wow-delay="0s">
+<span class="va gi pi ri bj fn">
+TESTIMONIALS
+</span>
+<h2 class="va li pi ui yi vl bo">
+What Our Client Say's
+</h2>
+
+</div>
+<div class="ha qb _d">
+<div class="jc ng vn/2">
+<div class="wow fadeInUp e ca ra ke qe kf sg hh ol um xn mq" data-wow-delay="0s">
+<div class="d m f da">
+<img src="src/images/shapes/testimonial-shape.svg" alt="shape" />
+</div>
+<div class="xa qb be">
+<div class="sa cc jc kd ke ne">
+<img src="src/images/testimonials/image-01.png" alt="author" />
+</div>
+<div class="jc">
+<h3 class="jb gi oi aj vl">
+Ananya Maloo
+</h3>
+<p class="hi qi xi vl">
+CEO & Founder @ Nuutjob.
+</p>
+</div>
+</div>
+<div>
+<p class="ii qi ti xi ul">
+“Partnering with INFOMEET was a game-changer for our business. 
+Their tailored IT solutions streamlined our operations, boosted our cybersecurity, 
+and increased our overall efficiency. 
+Their team's responsiveness and expertise have made them an indispensable asset to our growth.”
+</p>
+</div>
+</div>
+</div>
+<div class="jc ng vn/2">
+<div class="wow fadeInUp e ca ra ke qe kf sg hh ol um xn mq" data-wow-delay="0s">
+<div class="d m f da">
+<img src="src/images/shapes/testimonial-shape.svg" alt="shape" />
+</div>
+<div class="xa qb be">
+<div class="sa cc jc kd ke ne">
+<img src="src/images/testimonials/image-02.png" alt="author" />
+</div>
+<div class="jc">
+<h3 class="jb gi oi aj vl">
+  Ramanath Padmanabhan
+</h3>
+<p class="hi qi xi vl">
+Director @ AyuRythm
+</p>
+</div>
+</div>
+<div>
+<p class="ii qi ti xi ul">
+“As a healthcare provider, data security and compliance are paramount. 
+Infomeet not only met our rigorous security needs but exceeded our expectations. 
+Their seamless cloud migration and vigilant monitoring 
+ensure our patient data is safe and accessible. We couldn't be happier with their exceptional service.”
+</p>
+</div>
+</div>
+</div>
+<div class="jc ng vn/2">
+<div class="wow fadeInUp e ca ra ke qe kf sg hh ol um xn mq" data-wow-delay="0s">
+<div class="d m f da">
+<img src="src/images/shapes/testimonial-shape.svg" alt="shape" />
+</div>
+<div class="xa qb be">
+<div class="sa cc jc kd ke ne">
+<img src="src/images/testimonials/image-3.png" alt="author" />
+</div>
+<div class="jc">
+<h3 class="jb gi oi aj vl">
+Prashant Jadhav
+</h3>
+<p class="hi qi xi vl">
+CTO  @ First Cry.
+</p>
+</div>
+</div>
+<div>
+<p class="ii qi ti xi ul">
+“In the fast-paced world of e-commerce, having a reliable IT partner is non-negotiable. 
+Infomeet empowered us with a scalable and resilient online platform. 
+Their tech-savvy team not only resolved issues 
+promptly but also provided innovative solutions that helped us stay competitive.”
+</p>
+</div>
+</div>
+</div>
+<div class="jc ng vn/2">
+<div class="wow fadeInUp e ca ra ke qe kf sg hh ol um xn mq" data-wow-delay="0s">
+<div class="d m f da">
+<img src="src/images/shapes/testimonial-shape.svg" alt="shape" />
+</div>
+<div class="xa qb be">
+<div class="sa cc jc kd ke ne">
+<img src="src/images/testimonials/image-4.jpg" alt="author" />
+</div>
+<div class="jc">
+<h3 class="jb gi oi aj vl">
+Alok Kumar Rai
+</h3>
+<p class="hi qi xi vl">
+Vice Chancellor @ AKTU.
+</p>
+</div>
+</div>
+<div>
+<p class="ii qi ti xi ul">
+“Education is evolving, and so is technology. Infomeet seamlessly integrated modern 
+e-learning tools into our institution, enhancing both student engagement and administrative efficiency. 
+Their attentive support and training transformed the way we educate.”
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+<!-- question and FaQ  start   -->
+
+<section id="faq" x-data="
+    {
+      openFaq1: false,
+      openFaq2: false,
+      openFaq3: false,
+      openFaq4: false,
+      openFaq5: false,
+    }
+  " class="e ca nf ih ml">
+<div class="a">
+<div class="wow fadeInUp la fb ld fi qn" data-wow-delay="0s">
+<span class="va gi pi ri bj fn">
+FAQ
+</span>
+<h2 class="va li pi ui yi vl bo">
+Frequently Asked Questions
+</h2>
+<p class="la id gi qi xi ul">
+    Here are some common questions that customers might ask an Infomeet, along with brief answers:
+</p>
+</div>
+<div class="ha qb _d de">
+<div class="jc ng _o/12 jq/12">
+<div class="single-faq wow fadeInUp ra me kf ah ch gl zn _n" data-wow-delay="0s">
+<button @click="openFaq1 = !openFaq1" class="faq-btn qb jc be ee ei">
+<h3 class="kb ii pi aj vl dn co">
+ How can your IT services benefit my business?
+</h3>
+<span class="icon rb gc jc md be de ne wf zi yl pl gi oi" :class="openFaq1 && 'ud' ">
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_50_132)">
+<path d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z" fill="currentColor" />
+</g>
+<defs>
+<clipPath id="clip0_50_132">
+<rect width="10" height="10" fill="white" transform="translate(-0.000488281 0.000488281)" />
+</clipPath>
+</defs>
+</svg>
+</span>
+</button>
+<div x-show="openFaq1" class="faq-content">
+<p class="ar bi ii xi ul">
+    Our IT services can enhance your business by improving efficiency,
+     security, and scalability. We offer solutions tailored to your needs, 
+    such as network optimization, data management, and software development.
+</p>
+</div>
+</div>
+<div class="single-faq wow fadeInUp ra me kf ah ch gl zn _n" data-wow-delay="0s">
+<button @click="openFaq2 = !openFaq2" class="faq-btn qb jc be ee ei">
+<h3 class="kb ii pi aj vl dn co">
+    What cybersecurity measures do you have in place?
+</h3>
+<span class="icon rb gc jc md be de ne wf zi yl pl gi oi" :class="openFaq2 && 'ud' ">
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_50_132)">
+<path d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z" fill="currentColor" />
+</g>
+<defs>
+<clipPath id="clip0_50_132">
+<rect width="10" height="10" fill="white" transform="translate(-0.000488281 0.000488281)" />
+</clipPath>
+</defs>
+</svg>
+</span>
+</button>
+<div x-show="openFaq2" class="faq-content">
+<p class="ar bi ii xi ul">
+    We prioritize cybersecurity with firewalls,
+     encryption, regular audits, 
+    and employee training to safeguard your data from threats and breaches.
+</p>
+</div>
+</div>
+<div class="single-faq wow fadeInUp ra me kf ah ch gl zn _n" data-wow-delay="0s">
+<button @click="openFaq3 = !openFaq3" class="faq-btn qb jc be ee ei">
+<h3 class="kb ii pi aj vl dn co">
+    What software development services do you offer?
+</h3>
+<span class="icon rb gc jc md be de ne wf zi yl pl gi oi" :class="openFaq3 && 'ud' ">
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_50_132)">
+<path d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z" fill="currentColor" />
+</g>
+<defs>
+<clipPath id="clip0_50_132">
+<rect width="10" height="10" fill="white" transform="translate(-0.000488281 0.000488281)" />
+</clipPath>
+</defs>
+</svg>
+</span>
+</button>
+<div x-show="openFaq3" class="faq-content">
+<p class="ar bi ii xi ul">
+    We specialize in custom software development, app creation,
+     and web solutions to meet your specific business requirements.
+</p>
+</div>
+</div>
+<div class="single-faq wow fadeInUp ra me kf ah ch gl zn _n" data-wow-delay="0s">
+<button @click="openFaq4 = !openFaq4" class="faq-btn qb jc be ee ei">
+<h3 class="kb ii pi aj vl dn co">
+    Do you offer remote IT support?
+</h3>
+<span class="icon rb gc jc md be de ne wf zi yl pl gi oi" :class="openFaq4 && 'ud' ">
+<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_50_132)">
+<path d="M8.82033 1.91065L4.99951 5.73146L1.17869 1.91064L-0.000488487 3.08978L4.99951 8.08978L9.99951 3.08979L8.82033 1.91065Z" fill="currentColor" />
+</g>
+<defs>
+<clipPath id="clip0_50_132">
+<rect width="10" height="10" fill="white" transform="translate(-0.000488281 0.000488281)" />
+</clipPath>
+</defs>
+</svg>
+</span>
+</button>
+<div x-show="openFaq4" class="faq-content">
+<p class="ar bi ii xi ul">
+    Yes, we provide remote IT support for troubleshooting,
+    software updates, and minor technical issues to resolve problems efficiently.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="d l z ea">
+<img src="src/images/shapes/faq-shape-1.svg" alt="shape" />
+</div>
+<div class="d m _ ea">
+<img src="src/images/shapes/faq-shape-2.svg" alt="shape" />
+</div>
+</section>
+
+
+
+
+    <!-- question and FaQ  end  -->
+
+
+
+<section id="blog" class="th oh">
+<div class="a">
+<div class="wow fadeInUp la fb id fi qn" data-wow-delay="0s">
+<span class="va gi pi ri bj fn">
+LATEST NEWS
+</span>
+<h2 class="va li pi ui yi vl bo">
+Recent News & Blogs
+</h2>
+
+</div>
+<div class="ha qb _d">
+<div class="jc ng vn/2 yo/3">
+<div class="wow fadeInUp ra ke me nf ml" data-wow-delay="0s">
+<a href="https://unstop.com/p/hackathon-10-2023-infomeet-728504
+" target="_blank" class="ob">
+<img src="src/images/blogs/h.png" alt="blog-image" class="jc" />
+</a>
+<div class="hg kp lq">
+<div class="ya qb be">
+<p class="wa qb be xi ul">
+<span class="rh aj vl">
+<svg width="22" height="22" viewBox="0 0 22 22" class="cg">
+<path d="M11.0001 3.66675C11.9725 3.66675 12.9052 4.05306 13.5928 4.74069C14.2804 5.42832 14.6667 6.36095 14.6667 7.33341C14.6667 8.30587 14.2804 9.2385 13.5928 9.92614C12.9052 10.6138 11.9725 11.0001 11.0001 11.0001C10.0276 11.0001 9.09499 10.6138 8.40736 9.92614C7.71972 9.2385 7.33341 8.30587 7.33341 7.33341C7.33341 6.36095 7.71972 5.42832 8.40736 4.74069C9.09499 4.05306 10.0276 3.66675 11.0001 3.66675ZM11.0001 12.8334C15.0517 12.8334 18.3334 14.4742 18.3334 16.5001V18.3334H3.66675V16.5001C3.66675 14.4742 6.94841 12.8334 11.0001 12.8334Z" />
+</svg>
+</span>
+By Admin
+</p>
+<p class="qb be xi ul">
+<span class="rh aj vl">
+
+</div>
+<h3>
+<a href="https://unstop.com/p/hackathon-10-2023-infomeet-728504
+" target="_blank" class="pa ob ji pi aj kk vl fm en sp qq">
+  Hackathon's 1.0 '2023
+</a>
+</h3>
+
+</div>
+</div>
+</div>
+<div class="jc ng vn/2 yo/3">
+<div class="wow fadeInUp ra ke me nf ml" data-wow-delay="0s">
+<a href="/Internship.html" class="ob">
+<img src="src/images/blogs/i.png" alt="blog-image" class="jc" />
+</a>
+<div class="hg kp lq">
+<div class="ya qb be">
+<p class="wa qb be xi ul">
+<span class="rh aj vl">
+<svg width="22" height="22" viewBox="0 0 22 22" class="cg">
+<path d="M11.0001 3.66675C11.9725 3.66675 12.9052 4.05306 13.5928 4.74069C14.2804 5.42832 14.6667 6.36095 14.6667 7.33341C14.6667 8.30587 14.2804 9.2385 13.5928 9.92614C12.9052 10.6138 11.9725 11.0001 11.0001 11.0001C10.0276 11.0001 9.09499 10.6138 8.40736 9.92614C7.71972 9.2385 7.33341 8.30587 7.33341 7.33341C7.33341 6.36095 7.71972 5.42832 8.40736 4.74069C9.09499 4.05306 10.0276 3.66675 11.0001 3.66675ZM11.0001 12.8334C15.0517 12.8334 18.3334 14.4742 18.3334 16.5001V18.3334H3.66675V16.5001C3.66675 14.4742 6.94841 12.8334 11.0001 12.8334Z" />
+</svg>
+</span>
+By Admin
+</p>
+<p class="qb be xi ul">
+<span class="rh aj vl">
+
+</div>
+<h3>
+<a href="/Internship.html" class="pa ob ji pi aj kk vl fm en sp qq">
+4-Weeks Internship's
+</a>
+</h3>
+ </div>
+</div>
+</div>
+<div class="jc ng vn/2 yo/3">
+<div class="wow fadeInUp ra ke me nf ml" data-wow-delay="0s">
+<a href="/Internship.html" class="ob">
+<img src="src/images/blogs/j.png" alt="blog-image" class="jc" />
+</a>
+<div class="hg kp lq">
+<div class="ya qb be">
+<p class="wa qb be xi ul">
+<span class="rh aj vl">
+<svg width="22" height="22" viewBox="0 0 22 22" class="cg">
+<path d="M11.0001 3.66675C11.9725 3.66675 12.9052 4.05306 13.5928 4.74069C14.2804 5.42832 14.6667 6.36095 14.6667 7.33341C14.6667 8.30587 14.2804 9.2385 13.5928 9.92614C12.9052 10.6138 11.9725 11.0001 11.0001 11.0001C10.0276 11.0001 9.09499 10.6138 8.40736 9.92614C7.71972 9.2385 7.33341 8.30587 7.33341 7.33341C7.33341 6.36095 7.71972 5.42832 8.40736 4.74069C9.09499 4.05306 10.0276 3.66675 11.0001 3.66675ZM11.0001 12.8334C15.0517 12.8334 18.3334 14.4742 18.3334 16.5001V18.3334H3.66675V16.5001C3.66675 14.4742 6.94841 12.8334 11.0001 12.8334Z" />
+</svg>
+</span>
+By Admin
+</p>
+<p class="qb be xi ul">
+<span class="rh aj vl">
+
+</div>
+<h3>
+<a href="blog-details.html" class="pa ob ji pi aj kk vl fm en sp qq">
+Job's in Infomeet
+</a>
+</h3>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<!-- Contact -->
+   
+    
+
+
+<section id="contact" class="nf gh ml">
+  <div class="a">
+  <div class="ha qb _d be">
+  <div class="jc ng ap/12">
+  <div class="wow fadeInUp fb nd" data-wow-delay="0s">
+  <span class="va gi pi ri bj fn">
+  Contact Us
+  </span>
+  <h2 class="va li pi ui yi vl bo">
+  Let's talk about your problem.
+  </h2>
+  </div>
+  <div class="ha qb _d">
+  <div class="jc ng qm/2">
+  <div class="wow fadeInUp lb _c" data-wow-delay="0s">
+  <h3 class="pa gi oi aj vl">
+  Our Location
+  </h3>
+  <p class="ii qi wi xi ul">
+  Near NH-58 Delhi Road Meerut U.P Pin - 250001
+  </p>
+  </div>
+  </div>
+  <div class="jc ng qm/2">
+  <div class="wow fadeInUp lb _c" data-wow-delay="0s">
+  <h3 class="pa gi oi aj vl">
+  Email Address
+  </h3>
+  <p class="ii qi wi xi ul">
+  <a href="mailto:help@infomeet.in">help@infomeet.in</a>
+  </p>
+  <p class="ii qi wi xi ul">
+  
+  </p>
+  </div>
+  </div>
+  <div class="jc ng qm/2">
+  <div class="wow fadeInUp lb _c" data-wow-delay="0s">
+  <h3 class="pa gi oi aj vl">
+  Phone Number
+  </h3>
+  <p class="ii qi wi xi ul">
+    <a href="https://wa.me/7409069096" target="_blank">+91 740 906 9096</a>
+    <br>
+    <a href="tel:+91 843 970 4640" target="_blank">+91 843 970 4640</a>
+  
+  </p>
+ 
+  </div>
+  </div>
+  <div class="jc ng qm/2">
+  <div class="wow fadeInUp lb _c" data-wow-delay="0s">
+  <h3 class="pa gi oi aj vl">
+  How Can We Help?
+  </h3>
+  <p class="ii qi wi xi ul">
+  Tell us your problem we will get back to you ASAP.
+  </p>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="jc ng bp/12">
+  <div class="sm:ud-14 wow fadeInUp pe kf fh wg gl" data-wow-delay="0s">
+  <h3 class="xa mi pi aj vl hn tp sq">
+  Send us a Message
+  </h3>
+  <form action="https://formbold.com/s/oPaV4" method="POST">
+
+
+  <div class="za">
+  <label for="name" class="ya ob hi qi aj vl">
+  Full Name*
+  </label>
+  <input type="text" name="name" id="name" placeholder="Enter your full name" class="jc pe re ff if zg _g ii qi _i lj pk dl il tl" />
+  </div>
+  <div class="za">
+  <label for="email" class="ya ob hi qi aj vl">
+  Email Address*
+  </label>
+  <input type="email" name="email" id="email" placeholder="Enter your email address" class="jc pe re ff if zg _g ii qi _i lj pk dl il tl" />
+  </div>
+  <div class="za">
+  <label  for="message" class="ya ob hi qi aj vl">
+  Message*
+  </label>
+  <textarea name="message" rows="6" id="message" placeholder="Type your message" class="jc pe re ff if zg _g ii qi _i lj pk dl il tl"></textarea>
+  </div>
+  
+  <div class="form-group checkbox">
+      <input type="checkbox" id="cterms" value="Agreed-to-Terms" required><p class="ii qi wi xi ul">
+        I have read and agree with Infomeet's stated  and </p>
+        <a href="/Term and condition.html"><p class="ii qi wi xi ul">Terms Conditions</p></a> 
+      <div class="help-block with-errors"></div>
+  </div>
+
+  <button type="submit" class="jc oe of lg fi ii oi zi hk il yl dm">Send Message</button>
+  
+  <div class="form-message">
+      <div id="cmsgSubmit" class="h3 text-center hidden"></div>
+  </div>
+
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+</form>
+              
+             
+<!-- end of contact form -->
+
+
+<section id="newsletter" class="e ca">
+<div class="d f l ea hc jc nf ml"></div>
+<div class="a">
+<div class="wow fadeInUp e ca ke ne qf gg tm" data-wow-delay="0s">
+<div class="ha qb _d be">
+<div class="jc ng yo/2">
+<div class="ra no">
+<div class="cd">
+<h2 class="ya li pi ui zi bo">
+Newsletter
+</h2>
+<p class="gi qi zi">
+  Stay updated on InfoMeet IT Company's tech insights.
+   Subscribe for the latest trends, innovations, expert perspectives and jobs.
+</p>
+</div>
+</div>
+</div>
+<div class="jc pg yo/2">
+<div>
+
+
+  <form
+  action="https://app.formbold.com/s/9mN5Y"
+  method="POST" class="e"
+>
+  <label>
+    <input type="email" name="email" placeholder="Enter email address" class="jc oe re _e kf xg bh ii qi xi lj ul an">
+  </label>
+  
+  <button type="submit" class="o h/2 ab rb _b be oe of ch ii qi zi hk im mm rm/2">Submit
+    <span class="sh">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1.67496 17.5L19.1666 10L1.67496 2.5L1.66663 8.33333L14.1666 10L1.66663 11.6667L1.67496 17.5Z" fill="white" />
+      </svg>
+      </span>
+  </button>
+</form>
+
+
+
+
+</div>
+</div>
+</div>
+<div class="d f m ea">
+<img src="src/images/shapes/newsletter-shape.svg" alt="shape" />
+</div>
+</div>
+</div>
+</section>
+
+
+<footer class="e ca th">
+<div class="a">
+<div class="ha qb _d">
+<div class="jc ng vn/2 wo/12 gq/12">
+<div class="wow fadeInUp bb dd eq" data-wow-delay="0s">
+<a href="index.html" class="ta pb">
+<img src="src/images/logo/infologo-logo.png" alt="logo" class="footerlogo"/>
+</a>
+
+<div class="qb be ge">
+<a href="https://discord.gg/6fFDMN8JWS" target="_blank" class="qb ac pc be de oe nf xi fk lk gl vl bm" name="social-link" aria-label="social-link">
+<svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.25 8.46875C7.6875 8.46875 7.28125 8.96875 7.28125 9.53125C7.28125 10.0938 7.71875 10.5938 8.25 10.5938C8.8125 10.5938 9.21875 10.125 9.21875 9.53125C9.25 8.9375 8.8125 8.46875 8.25 8.46875Z" fill="currentColor" />
+<path d="M11.75 10.5625C12.285 10.5625 12.7187 10.0868 12.7187 9.5C12.7187 8.9132 12.285 8.4375 11.75 8.4375C11.215 8.4375 10.7812 8.9132 10.7812 9.5C10.7812 10.0868 11.215 10.5625 11.75 10.5625Z" fill="currentColor" />
+<path d="M16.4687 0.3125H3.53125C2.4375 0.3125 1.53125 1.1875 1.53125 2.28125V15.375C1.53125 16.4688 2.40625 17.3438 3.5 17.3438H14.4687L13.9375 15.5938L15.1562 16.75L16.3437 17.8437L18.4062 19.6875V2.28125C18.5 1.1875 17.5625 0.3125 16.4687 0.3125ZM12.7187 12.9375C12.7187 12.9375 12.375 12.5313 12.0625 12.1563C13.3437 11.8125 13.8125 11 13.8125 11C13.4062 11.25 13.0312 11.4375 12.7187 11.5625C12.25 11.7812 11.75 11.9062 11.3125 11.9687C10.375 12.1562 9.5625 12.0937 8.8125 11.9687C8.25 11.875 7.8125 11.7188 7.40625 11.5625C7.1875 11.4687 6.90625 11.375 6.6875 11.25C6.65625 11.25 6.65625 11.2188 6.59375 11.2188C6.59375 11.2188 6.5625 11.2187 6.5625 11.1875C6.375 11.0937 6.3125 11 6.3125 11C6.3125 11 6.8125 11.7813 8.03125 12.1563C7.71875 12.5 7.375 12.9375 7.375 12.9375C5.21875 12.8438 4.4375 11.5 4.4375 11.5C4.4375 8.375 5.84375 5.875 5.84375 5.875C7.25 4.8125 8.5625 4.875 8.5625 4.875L8.65625 5C6.875 5.46875 6.09375 6.25 6.09375 6.25C6.09375 6.25 6.3125 6.125 6.65625 6C7.71875 5.5625 8.5 5.4375 8.84375 5.375C8.875 5.375 8.9375 5.375 9.03125 5.375C9.59375 5.28125 10.3125 5.28125 10.9687 5.375C11.9062 5.46875 12.875 5.78125 13.875 6.3125C13.875 6.3125 13.125 5.59375 11.4375 5.09375L11.5625 4.90625C11.5625 4.90625 12.875 4.875 14.2812 5.90625C14.2812 5.90625 15.6875 8.40625 15.6875 11.5313C15.7187 11.5 14.875 12.9063 12.7187 12.9375Z" fill="currentColor" />
+</svg>
+</a>
+<a href="https://twitter.com/infomeet1" target="_blank" class="qb ac pc be de oe nf xi fk lk gl vl bm" name="social-link" aria-label="social-link">
+<svg width="18" height="15" viewBox="0 0 18 15" class="cg">
+<path d="M17.7165 2.00016C17.0749 2.29183 16.3832 2.4835 15.6665 2.57516C16.3999 2.1335 16.9665 1.4335 17.2332 0.591829C16.5415 1.0085 15.7749 1.30016 14.9665 1.46683C14.3082 0.750163 13.3832 0.333496 12.3332 0.333496C10.3749 0.333496 8.77487 1.9335 8.77487 3.9085C8.77487 4.19183 8.8082 4.46683 8.86654 4.72516C5.89987 4.57516 3.2582 3.15016 1.49987 0.991829C1.19154 1.51683 1.01654 2.1335 1.01654 2.7835C1.01654 4.02516 1.64154 5.12516 2.6082 5.75016C2.01654 5.75016 1.46654 5.5835 0.983203 5.3335C0.983203 5.3335 0.983203 5.3335 0.983203 5.3585C0.983203 7.09183 2.21654 8.54183 3.84987 8.86683C3.54987 8.95016 3.2332 8.99183 2.9082 8.99183C2.6832 8.99183 2.4582 8.96683 2.24154 8.92516C2.69154 10.3335 3.99987 11.3835 5.57487 11.4085C4.3582 12.3752 2.81654 12.9418 1.1332 12.9418C0.84987 12.9418 0.566536 12.9252 0.283203 12.8918C1.86654 13.9085 3.74987 14.5002 5.76654 14.5002C12.3332 14.5002 15.9415 9.05016 15.9415 4.32516C15.9415 4.16683 15.9415 4.01683 15.9332 3.8585C16.6332 3.3585 17.2332 2.72516 17.7165 2.00016Z" />
+</svg>
+</a>
+<a href="https://www.linkedin.com/company/infomeet" target="_blank" class="qb ac pc be de oe nf xi fk lk gl vl bm" name="social-link" aria-label="social-link">
+<svg width="16" height="16" viewBox="0 0 16 16" class="cg">
+<path d="M13.8333 0.5C14.2754 0.5 14.6993 0.675595 15.0118 0.988155C15.3244 1.30072 15.5 1.72464 15.5 2.16667V13.8333C15.5 14.2754 15.3244 14.6993 15.0118 15.0118C14.6993 15.3244 14.2754 15.5 13.8333 15.5H2.16667C1.72464 15.5 1.30072 15.3244 0.988155 15.0118C0.675595 14.6993 0.5 14.2754 0.5 13.8333V2.16667C0.5 1.72464 0.675595 1.30072 0.988155 0.988155C1.30072 0.675595 1.72464 0.5 2.16667 0.5H13.8333ZM13.4167 13.4167V9C13.4167 8.27949 13.1304 7.5885 12.621 7.07903C12.1115 6.56955 11.4205 6.28333 10.7 6.28333C9.99167 6.28333 9.16667 6.71667 8.76667 7.36667V6.44167H6.44167V13.4167H8.76667V9.30833C8.76667 8.66667 9.28333 8.14167 9.925 8.14167C10.2344 8.14167 10.5312 8.26458 10.75 8.48338C10.9688 8.70217 11.0917 8.99891 11.0917 9.30833V13.4167H13.4167ZM3.73333 5.13333C4.10464 5.13333 4.46073 4.98583 4.72328 4.72328C4.98583 4.46073 5.13333 4.10464 5.13333 3.73333C5.13333 2.95833 4.50833 2.325 3.73333 2.325C3.35982 2.325 3.0016 2.47338 2.73749 2.73749C2.47338 3.0016 2.325 3.35982 2.325 3.73333C2.325 4.50833 2.95833 5.13333 3.73333 5.13333ZM4.89167 13.4167V6.44167H2.58333V13.4167H4.89167Z" />
+</svg>
+</a>
+<a href="https://www.instagram.com/infomeet.in/" class="qb ac pc be de oe nf xi fk lk gl vl bm" name="social-link" aria-label="social-link">
+<img src="/src/images/footer/https-www-instagram-comovermountaincycles-new-instagram-icon-white-11563063729ytz7nlpga1-PhotoRoom.png-PhotoRoom.png" alt="">
+</a>
+</div>
+</div>
+</div>
+<div class="jc ng qm/2 vn/2 wo/12 hq/12">
+<div class="wow fadeInUp bb eq" data-wow-delay="0s">
+<h2 class="za mi pi yi vl">
+Quick Links
+</h2>
+<div class="he">
+
+<a href="/index.html#roadmap" class="ob ii qi xi kk ul fm">
+Roadmap
+</a>
+<a href="https://wa.me/7409069096" class="ob ii qi xi kk ul fm">
+  24/7 Supports
+  </a>
+  <a href="/Internship.html" class="ob ii qi xi kk ul fm">
+    Internship
+    </a>
+    <a href="https://unstop.com/p/hackathon-10-2023-infomeet-728504
+    " target="_blank" class="ob ii qi xi kk ul fm">
+      Hackathon
+      </a>
+
+
+</div>
+</div>
+</div>
+<div class="jc ng qm/2 vn/2 wo/12 hq/12">
+<div class="wow fadeInUp bb eq" data-wow-delay="0s">
+<h2 class="za mi pi yi vl">
+Supports
+</h2>
+<div class="he">
+
+<a href="/support.html" class="ob ii qi xi kk ul fm">
+Help & Support
+</a>
+<a href="/Term and condition.html" class="ob ii qi xi kk ul fm">
+Terms & Conditions
+</a>
+
+<a href="/index.html#faq" class="ob ii qi xi kk ul fm">
+On Point FAQ
+</a>
+</div>
+</div>
+</div>
+<div class="jc ng vn/2 yo/2 gq/12">
+<div class="wow fadeInUp bb eq" data-wow-delay="0s">
+<h2 class="za mi pi yi vl">
+  approval licensing and registration
+</h2>
+<div class="he">
+<div class="qb">
+<div class="sa xb jc ed pe">
+<img src="src/images/footer/AICTE-Logo.png" alt="post" class="yb jc pe dg eg" />
+</div>
+<div>
+<a href="javascript:void(0)" class="ii qi xi kk ul fm">
+Approved by AICTE
+</a>
+<p class="qb be">
+
+
+</p>
+</div>
+</div>
+<div class="qb">
+<div class="sa xb jc ed pe">
+<img src="src/images/footer/MSME.png" alt="post" class="yb jc pe dg eg" />
+</div>
+<div>
+<a href="javascript:void(0)" class="ii qi xi kk ul fm">
+Registraction No : UDYAM-UP-56-0058311
+</a>
+<p class="qb be">
+
+
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="wow fadeInUp we bf dh fi al" data-wow-delay="0s">
+<p class="ii qi wi xi ul">
+©  all Rights Reserved, Crafted by 
+<a href="http://infomeet.in" rel="noopenner nofollow" class="kk">
+INFOMEET
+</a>
+</p>
+</div>
+</div>
+<div class="d f l ea">
+<img src="src/images/shapes/footer-shape-2.svg" alt="shape" />
+</div>
+<div class="d n m ea">
+<img src="src/images/shapes/footer-shape-1.svg" alt="shape" />
+</div>
+</footer>
+
+
+<a x-show="scrolledFromTop" href="javascript:void(0)" name="scrollToTop" aria-label="scrollToTop" class="zq back-to-top c p q r fa qb ac pc be de me of zi kj rj">
+<span class="cb bc qc sd we xe cf"></span>
+</a>
+
+
+<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+      // ==== for menu scroll
+      const pageLink = document.querySelectorAll(".scroll-menu");
+
+      pageLink.forEach((elem) => {
+        elem.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.querySelector(elem.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+            offsetTop: 1 - 60,
+          });
+        });
+      });
+
+      // section menu active
+      function onScroll(event) {
+        const sections = document.querySelectorAll(".scroll-menu");
+        const scrollPos =
+          window.pageYOffset ||
+          document.documentElement.scrollTop ||
+          document.body.scrollTop;
+
+        for (let i = 0; i < sections.length; i++) {
+          const currLink = sections[i];
+          const val = currLink.getAttribute("href");
+          const refElement = document.querySelector(val);
+          const scrollTopMinus = scrollPos + 73;
+          if (
+            refElement.offsetTop <= scrollTopMinus &&
+            refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
+          ) {
+            document
+              .querySelector(".scroll-menu")
+              .classList.remove("vl", "bj");
+            currLink.classList.add("vl", "bj");
+          } else {
+            currLink.classList.remove("vl", "bj");
+          }
+        }
+      }
+
+      window.document.addEventListener("scroll", onScroll);
+    </script>
+<script defer src="bundle.js"></script><script>(function(){var js = "window['__CF$cv$params']={r:'7f28e02d49d51002',t:'MTY5MTM0MTY0MS44NjgwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='cdn-cgi/challenge-platform/h/g/scripts/jsd/74ac0d47/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" data-cf-beacon='{"rayId":"7f28e02d49d51002","version":"2023.7.0","r":1,"b":1,"token":"9a6015d415bb4773a0bff22543062d3b","si":100}' crossorigin="anonymous"></script>
+</body>
+
+</html>
